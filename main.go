@@ -14,7 +14,7 @@ func main() {
 	log.SetFlags(log.Lshortfile)
 
 	// Open file if passed in.
-	var file *os.File
+	var file *os.File = os.Stdin
 	var err error
 	if flag.NArg() > 0 {
 		file, err = os.Open(flag.Arg(0))
